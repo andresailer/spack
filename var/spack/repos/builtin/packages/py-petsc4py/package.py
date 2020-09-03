@@ -17,6 +17,7 @@ class PyPetsc4py(PythonPackage):
     maintainers = ['dalcinl', 'balay']
 
     version('develop', branch='master')
+    version('3.14.0', branch='master')
     version('3.13.0', sha256='fd41d9c399f8a110f33b62c46ece776755113116bf42d4984053ea3a52a3efae')
     version('3.12.0', sha256='1ddffc35163ec81de50ca43b8a82fdbe73baf02d9e24d594685d5f4a6c17a8cb')
     version('3.11.0', sha256='50a7bbca76000da287d5b18969ddf4743b360bda1f6ee3b43b5829095569cc46')
@@ -39,6 +40,7 @@ class PyPetsc4py(PythonPackage):
     depends_on('petsc+mpi', when='+mpi')
     depends_on('petsc~mpi', when='~mpi')
     depends_on('petsc@develop', when='@develop')
+    depends_on('petsc@3.14:3.14.99', when='@3.14:3.14.99')
     depends_on('petsc@3.13:3.13.99', when='@3.13:3.13.99')
     depends_on('petsc@3.12:3.12.99', when='@3.12:3.12.99')
     depends_on('petsc@3.11:3.11.99', when='@3.11:3.11.99')

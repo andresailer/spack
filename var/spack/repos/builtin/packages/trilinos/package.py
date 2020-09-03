@@ -203,6 +203,11 @@ class Trilinos(CMakePackage):
 
     resource(name='dtk',
              git='https://github.com/ornl-cees/DataTransferKit.git',
+             branch='master',
+             placement='DataTransferKit',
+             when='+dtk @13.0.0:13.0.99')
+    resource(name='dtk',
+             git='https://github.com/ornl-cees/DataTransferKit.git',
              commit='4fe4d9d56cfd4f8a61f392b81d8efd0e389ee764',  # branch dtk-3.0
              placement='DataTransferKit',
              when='+dtk @12.14.0:12.14.99')
