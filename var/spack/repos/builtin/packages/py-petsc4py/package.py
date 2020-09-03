@@ -10,9 +10,9 @@ class PyPetsc4py(PythonPackage):
     """This package provides Python bindings for the PETSc package.
     """
 
-    homepage = "https://bitbucket.org/petsc/petsc4py"
+    homepage = "https://gitlab.com/petsc/petsc4py"
     url      = "https://bitbucket.org/petsc/petsc4py/get/3.10.0.tar.gz"
-    git      = "https://bitbucket.org/petsc/petsc4py.git"
+    git      = "https://gitlab.com/petsc/petsc4py.git"
 
     maintainers = ['dalcinl', 'balay']
 
