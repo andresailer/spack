@@ -24,7 +24,11 @@ class Libpng(AutotoolsPackage):
     version('1.2.57', sha256='7f415186d38ca71c23058386d7cf5135c8beda821ee1beecdc2a7a26c0356615')
 
     depends_on('zlib@1.0.4:')  # 1.2.5 or later recommended
-
+    depends_on('m4',       type='build')
+    depends_on('autoconf', type='build')
+    depends_on('automake', type='build')
+    depends_on('libtool',  type='build')
+    
     def configure_args(self):
         args = [
             # not honored, see
