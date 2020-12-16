@@ -12,7 +12,10 @@ class Libdrm(AutotoolsPackage):
     on Linux, BSD and other systems supporting the ioctl interface."""
 
     homepage = "http://dri.freedesktop.org/libdrm/"
-    url      = "https://dri.freedesktop.org/libdrm/libdrm-2.4.59.tar.gz"
+    urls = [
+        "https://dri.freedesktop.org/libdrm/libdrm-2.4.101.tar.xz",
+        "https://dri.freedesktop.org/libdrm/libdrm-2.4.59.tar.gz",
+    ]
 
     version('2.4.100', sha256='6a5337c054c0c47bc16607a21efa2b622e08030be4101ef4a241c5eb05b6619b')
     version('2.4.81',  sha256='64036c5e0668fdc2b820dcc0ebab712f44fd2c2147d23dc5a6e003b19f0d3e9f')
@@ -24,6 +27,11 @@ class Libdrm(AutotoolsPackage):
     depends_on('pkgconfig', type='build')
     depends_on('libpciaccess@0.10:', when=(sys.platform != 'darwin'))
     depends_on('libpthread-stubs')
+
+    depends_on('autoconf', type='build')
+    depends_on('automake', type='build')
+    depends_on('libtool',  type='build')
+    depends_on('m4',       type='build')
 
     def configure_args(self):
         args = []
